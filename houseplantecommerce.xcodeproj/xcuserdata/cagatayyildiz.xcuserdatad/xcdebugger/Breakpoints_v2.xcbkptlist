@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A7B651F7-76F5-4D3A-81F1-7F83E7459E79"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5BB1E1DA-A225-4904-86CA-880E9CCF4037"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "houseplantecommerce/Repository/ProductRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "getAll()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6470F2D9-6C6C-4641-B39E-151B1E4E7221"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "houseplantecommerce/Repository/ProductRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getAll()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E0EEB33-10EA-484D-B021-9737A8D6318B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "houseplantecommerce/Repository/ProductRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "getAll()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2E0EEB33-10EA-484D-B021-9737A8D6318B - 4ccb1f67b87f965c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "houseplantecommerce.ProductRepository.getAll() -&gt; Swift.Array&lt;houseplantecommerce.ProductModel&gt;"
+                  moduleName = "houseplantecommerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cagatayyildiz/Desktop/projects/houseplantecommerce/houseplantecommerce/Repository/ProductRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "381">
+               </Location>
+               <Location
+                  uuid = "2E0EEB33-10EA-484D-B021-9737A8D6318B - 8d3c4b2ffc72b267"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in houseplantecommerce.ProductRepository.getAll() -&gt; Swift.Array&lt;houseplantecommerce.ProductModel&gt;"
+                  moduleName = "houseplantecommerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cagatayyildiz/Desktop/projects/houseplantecommerce/houseplantecommerce/Repository/ProductRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "190">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9979F05E-0713-4FCB-A701-9033F2222EAB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "houseplantecommerce/Repository/ProductRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getAll()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1013926-F5E1-4A47-B138-8AA9ADE08C4D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "houseplantecommerce/Views/Screens/Home/ProductDetailScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "init(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6F9ECDC1-6850-4A1C-83EB-ECDDC57C1E6B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "houseplantecommerce/Repository/ProductRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "getProductById(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58F34F59-0E41-4C29-BFAD-DDFFD9851028"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "houseplantecommerce/Views/Screens/Home/ProductDetailScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ProductDetailScreen"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "58F34F59-0E41-4C29-BFAD-DDFFD9851028 - 93cc155292062cda"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of houseplantecommerce.ProductDetailScreen.fetchProduct : houseplantecommerce.ProductRepository"
+                  moduleName = "houseplantecommerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cagatayyildiz/Desktop/projects/houseplantecommerce/houseplantecommerce/Views/Screens/Home/ProductDetailScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "58F34F59-0E41-4C29-BFAD-DDFFD9851028 - cee970260c46ffc4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "houseplantecommerce.ProductDetailScreen.fetchProduct.getter : houseplantecommerce.ProductRepository"
+                  moduleName = "houseplantecommerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cagatayyildiz/Desktop/projects/houseplantecommerce/houseplantecommerce/Views/Screens/Home/ProductDetailScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "58F34F59-0E41-4C29-BFAD-DDFFD9851028 - 5c86406e3338a368"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "houseplantecommerce.ProductDetailScreen.fetchProduct.setter : houseplantecommerce.ProductRepository"
+                  moduleName = "houseplantecommerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cagatayyildiz/Desktop/projects/houseplantecommerce/houseplantecommerce/Views/Screens/Home/ProductDetailScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  uuid = "58F34F59-0E41-4C29-BFAD-DDFFD9851028 - 8d2e773d65f48552"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "houseplantecommerce.ProductDetailScreen.fetchProduct.modify : houseplantecommerce.ProductRepository"
+                  moduleName = "houseplantecommerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cagatayyildiz/Desktop/projects/houseplantecommerce/houseplantecommerce/Views/Screens/Home/ProductDetailScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "14">
+               </Location>
+               <Location
+                  uuid = "58F34F59-0E41-4C29-BFAD-DDFFD9851028 - 27fb171bb1c67ada"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "houseplantecommerce.ProductDetailScreen.fetchProduct.modify : houseplantecommerce.ProductRepository with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "houseplantecommerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cagatayyildiz/Desktop/projects/houseplantecommerce/houseplantecommerce/Views/Screens/Home/ProductDetailScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "58F34F59-0E41-4C29-BFAD-DDFFD9851028 - f1dbf2a8d717d554"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "houseplantecommerce.ProductDetailScreen.$fetchProduct.getter : SwiftUI.ObservedObject&lt;houseplantecommerce.ProductRepository&gt;.Wrapper"
+                  moduleName = "houseplantecommerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cagatayyildiz/Desktop/projects/houseplantecommerce/houseplantecommerce/Views/Screens/Home/ProductDetailScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "107">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
