@@ -38,7 +38,7 @@ struct ContentView: View {
             
             Text("Blog View")
                 .tabItem {
-                    Image(systemName: "person.crop.circle")
+                    Image(systemName: "heart.text.square")
                     Text("Blog")
                 }
                 .tag(3)
