@@ -28,7 +28,8 @@ struct HomeScreen: View {
                     Text(item.name)
                 }
                 
-               )
+               ).navigationTitle("Çiçekler ")
+                    .navigationBarTitleDisplayMode(.inline)
                 
             }
             .onAppear {
@@ -36,6 +37,7 @@ struct HomeScreen: View {
             }
             
         }
+        
         
 
         
