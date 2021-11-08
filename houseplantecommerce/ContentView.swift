@@ -23,7 +23,7 @@ struct ContentView: View {
 
             Text("Products View")
                 .tabItem {
-                    Image(systemName: "house.fill")
+                    Image(systemName: "leaf")
                     Text("Products")
                 }
                 .tag(1)
@@ -45,7 +45,7 @@ struct ContentView: View {
             
             Text("Profile View")
                 .tabItem {
-                    Image(systemName: "person.crop.circle")
+                    Image(systemName: "person.crop.circle.fill.badge.checkmark")
                     Text("Profile")
                 }
                 .tag(4)
