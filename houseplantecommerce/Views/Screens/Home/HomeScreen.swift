@@ -14,7 +14,10 @@ struct HomeScreen: View {
     var data = [ProductModel]()
 
 
-    var body: some View { 
+    var body: some View {
+        
+            
+        
         
         NavigationView{
             
@@ -28,16 +31,20 @@ struct HomeScreen: View {
                     Text(item.name)
                 }
                 
-               ).navigationTitle("Çiçekler ")
-                    .navigationBarTitleDisplayMode(.inline)
+               ).navigationTitle("Çiçekler")
+                    .navigationBarTitleDisplayMode(.inline).padding()
+                
                 
             }
+            
             .onAppear {
                fetchProducts.getAll()
             }
             
         }
         
+        
+       
         
 
         

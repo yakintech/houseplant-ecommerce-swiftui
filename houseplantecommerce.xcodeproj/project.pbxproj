@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1998BBD5273D21BA0014E884 /* OzelGorselScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998BBD4273D21BA0014E884 /* OzelGorselScreen.swift */; };
+		1998BBD7273D23310014E884 /* kirmizigül.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1998BBD6273D23310014E884 /* kirmizigül.jpg */; };
 		1D054E63272D4DA80081E75B /* houseplantecommerceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D054E62272D4DA80081E75B /* houseplantecommerceApp.swift */; };
 		1D054E65272D4DA80081E75B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D054E64272D4DA80081E75B /* ContentView.swift */; };
 		1D054E67272D4DAA0081E75B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D054E66272D4DAA0081E75B /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1998BBD4273D21BA0014E884 /* OzelGorselScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OzelGorselScreen.swift; sourceTree = "<group>"; };
+		1998BBD6273D23310014E884 /* kirmizigül.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "kirmizigül.jpg"; path = "../../../../Downloads/kirmizigül.jpg"; sourceTree = "<group>"; };
 		1D054E5F272D4DA80081E75B /* houseplantecommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = houseplantecommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D054E62272D4DA80081E75B /* houseplantecommerceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = houseplantecommerceApp.swift; sourceTree = "<group>"; };
 		1D054E64272D4DA80081E75B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 				1D054E71272D5A720081E75B /* Models */,
 				1D054E62272D4DA80081E75B /* houseplantecommerceApp.swift */,
 				1D054E64272D4DA80081E75B /* ContentView.swift */,
+				1998BBD6273D23310014E884 /* kirmizigül.jpg */,
 				1D054E66272D4DAA0081E75B /* Assets.xcassets */,
 				1D054E6B272D4DAA0081E75B /* Info.plist */,
 				1D054E68272D4DAA0081E75B /* Preview Content */,
@@ -166,6 +171,7 @@
 			children = (
 				1D25A36B2737CA88007D42A9 /* HomeScreen.swift */,
 				1D25A3722737E552007D42A9 /* ProductDetailScreen.swift */,
+				1998BBD4273D21BA0014E884 /* OzelGorselScreen.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 			files = (
 				1D054E6A272D4DAA0081E75B /* Preview Assets.xcassets in Resources */,
 				1D054E67272D4DAA0081E75B /* Assets.xcassets in Resources */,
+				1998BBD7273D23310014E884 /* kirmizigül.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +255,7 @@
 				1D25A3642737BC99007D42A9 /* UserRepository.swift in Sources */,
 				1D054E63272D4DA80081E75B /* houseplantecommerceApp.swift in Sources */,
 				1D25A3702737CB91007D42A9 /* ProductModel.swift in Sources */,
+				1998BBD5273D21BA0014E884 /* OzelGorselScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
