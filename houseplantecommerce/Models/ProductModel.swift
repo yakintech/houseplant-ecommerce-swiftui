@@ -13,6 +13,7 @@ struct ProductModel :Codable, Identifiable {
     var id: String = ""
     var name:String = ""
     var description:String = ""
+    var price : Double = 0
     var images : [String] = [String]()
     
     
@@ -21,6 +22,7 @@ struct ProductModel :Codable, Identifiable {
             case name = "name"
             case description = "description"
             case images = "images"
+            case price = "price"
         }
 }
 

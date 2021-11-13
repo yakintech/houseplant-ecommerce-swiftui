@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import  URLImage
 
 struct HomeScreen: View {
     
@@ -28,7 +29,15 @@ struct HomeScreen: View {
                 
                 destination: ProductDetailScreen(id: item.id),
                 label: {
-                    Text(item.name)
+                    VStack{
+                        Text(item.name)
+                        URLImage(URL(string: item.images[0])!) { image in
+                                        image
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                    }
+                       Text(String(item.price))
+                    }
                 }
                 
                ).navigationTitle("Çiçekler")

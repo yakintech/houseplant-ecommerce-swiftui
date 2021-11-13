@@ -110,8 +110,8 @@
             filePath = "houseplantecommerce/Views/Screens/Home/ProductDetailScreen.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "init(id:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "houseplantecommerce/Views/Screens/Home/ProductDetailScreen.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
             landmarkName = "ProductDetailScreen"
             landmarkType = "14">
             <Locations>
@@ -238,6 +238,22 @@
                   offsetFromSymbolStart = "107">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2AF627C5-9B1A-4F84-A36E-253F5555B6F3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "houseplantecommerce/Views/Screens/Home/ProductDetailScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

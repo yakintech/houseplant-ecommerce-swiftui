@@ -11,13 +11,10 @@ import URLImage
 struct ProductDetailScreen: View {
     
     var productid : String = ""
-    @State var imageUrl : URL = URL(string: "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg")!
-    
     @ObservedObject var fetchProduct = ProductRepository()
      
     init(id:String){
         self.productid = id
-        
     }
     
     
@@ -25,7 +22,7 @@ struct ProductDetailScreen: View {
         
         VStack{
             
-            URLImage(imageUrl) { image in
+            URLImage(getImage(product: fetchProduct.product)) { image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -39,3 +36,18 @@ struct ProductDetailScreen: View {
         
     }
 }
+
+
+func getImage(product:ProductModel) -> URL{
+    if(product.images.count > 0){
+       return URL(string: product.images[0])!
+  
+    }
+    else{
+        return URL(string: "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg")!
+      
+    }
+}
+
+
+
