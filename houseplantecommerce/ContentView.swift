@@ -15,8 +15,6 @@ struct ContentView: View {
     
         TabView(selection: $selection){
             HomeScreen()
-            
-            
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")

@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1998BBD5273D21BA0014E884 /* OzelGorselScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1998BBD4273D21BA0014E884 /* OzelGorselScreen.swift */; };
 		1D054E63272D4DA80081E75B /* houseplantecommerceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D054E62272D4DA80081E75B /* houseplantecommerceApp.swift */; };
 		1D054E65272D4DA80081E75B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D054E64272D4DA80081E75B /* ContentView.swift */; };
 		1D054E67272D4DAA0081E75B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D054E66272D4DAA0081E75B /* Assets.xcassets */; };
@@ -21,10 +20,11 @@
 		1D25A3732737E552007D42A9 /* ProductDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A3722737E552007D42A9 /* ProductDetailScreen.swift */; };
 		1DD2C068273FB08C005CA8FD /* AlternativeProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2C067273FB08C005CA8FD /* AlternativeProductRepository.swift */; };
 		1DD2C06A273FB2B8005CA8FD /* AlternativeHomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2C069273FB2B8005CA8FD /* AlternativeHomeScreen.swift */; };
+		1DD2C06D273FBCED005CA8FD /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 1DD2C06C273FBCED005CA8FD /* URLImageStore */; };
+		1DD2C06F273FBCED005CA8FD /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1DD2C06E273FBCED005CA8FD /* URLImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1998BBD4273D21BA0014E884 /* OzelGorselScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OzelGorselScreen.swift; sourceTree = "<group>"; };
 		1D054E5F272D4DA80081E75B /* houseplantecommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = houseplantecommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D054E62272D4DA80081E75B /* houseplantecommerceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = houseplantecommerceApp.swift; sourceTree = "<group>"; };
 		1D054E64272D4DA80081E75B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD2C06F273FBCED005CA8FD /* URLImage in Frameworks */,
+				1DD2C06D273FBCED005CA8FD /* URLImageStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +176,6 @@
 				1D25A36B2737CA88007D42A9 /* HomeScreen.swift */,
 				1D25A3722737E552007D42A9 /* ProductDetailScreen.swift */,
 				1DD2C069273FB2B8005CA8FD /* AlternativeHomeScreen.swift */,
-				1998BBD4273D21BA0014E884 /* OzelGorselScreen.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -195,6 +196,10 @@
 			dependencies = (
 			);
 			name = houseplantecommerce;
+			packageProductDependencies = (
+				1DD2C06C273FBCED005CA8FD /* URLImageStore */,
+				1DD2C06E273FBCED005CA8FD /* URLImage */,
+			);
 			productName = houseplantecommerce;
 			productReference = 1D054E5F272D4DA80081E75B /* houseplantecommerce.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +227,9 @@
 				Base,
 			);
 			mainGroup = 1D054E56272D4DA80081E75B;
+			packageReferences = (
+				1DD2C06B273FBCED005CA8FD /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 1D054E60272D4DA80081E75B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,7 +267,6 @@
 				1D054E63272D4DA80081E75B /* houseplantecommerceApp.swift in Sources */,
 				1D25A3702737CB91007D42A9 /* ProductModel.swift in Sources */,
 				1DD2C068273FB08C005CA8FD /* AlternativeProductRepository.swift in Sources */,
-				1998BBD5273D21BA0014E884 /* OzelGorselScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +455,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1DD2C06B273FBCED005CA8FD /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1DD2C06C273FBCED005CA8FD /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DD2C06B273FBCED005CA8FD /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+		1DD2C06E273FBCED005CA8FD /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DD2C06B273FBCED005CA8FD /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1D054E57272D4DA80081E75B /* Project object */;
 }
