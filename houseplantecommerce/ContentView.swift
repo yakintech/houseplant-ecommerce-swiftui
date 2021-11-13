@@ -12,8 +12,11 @@ struct ContentView: View {
     @State private var selection = 0
     
     var body: some View {
+    
         TabView(selection: $selection){
             HomeScreen()
+            
+            
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Home")
@@ -23,7 +26,7 @@ struct ContentView: View {
 
             Text("Products View")
                 .tabItem {
-                    Image(systemName: "house.fill")
+                    Image(systemName: "leaf")
                     Text("Products")
                 }
                 .tag(1)
@@ -38,18 +41,20 @@ struct ContentView: View {
             
             Text("Blog View")
                 .tabItem {
-                    Image(systemName: "person.crop.circle")
+                    Image(systemName: "heart.text.square")
                     Text("Blog")
                 }
                 .tag(3)
             
             Text("Profile View")
                 .tabItem {
-                    Image(systemName: "person.crop.circle")
+                    Image(systemName: "person.crop.circle.fill.badge.checkmark")
                     Text("Profile")
                 }
                 .tag(4)
+            
         }
+        
     }
 }
 
