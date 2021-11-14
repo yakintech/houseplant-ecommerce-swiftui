@@ -18,40 +18,43 @@ struct HomeScreen: View {
     var body: some View {
         
             
-        
-        
         NavigationView{
-            
-            List(fetchProducts.products){ item in
-                
-               NavigationLink(
-               
-                
-                destination: ProductDetailScreen(id: item.id),
-                label: {
-                    VStack{
-                        Text(item.name)
-                        URLImage(URL(string: item.images[0])!) { image in
-                                        image
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                    }
-                       Text(String(item.price))
-                    }
-                }
-                
-               ).navigationTitle("Çiçekler")
-                    .navigationBarTitleDisplayMode(.inline).padding()
-                
-                
-            }
-            
-            .onAppear {
-               fetchProducts.getAll()
-            }
-            
+            ProductListView()
         }
         
+    
+//        NavigationView{
+//
+//            List(fetchProducts.products){ item in
+//
+//               NavigationLink(
+//
+//
+//                destination: ProductDetailScreen(id: item.id),
+//                label: {
+//                    VStack{
+//                        Text(item.name)
+//                        URLImage(URL(string: item.images[0])!) { image in
+//                                        image
+//                                            .resizable()
+//                                            .aspectRatio(contentMode: .fit)
+//                                    }
+//                       Text(String(item.price))
+//                    }
+//                }
+//
+//               ).navigationTitle("Çiçekler")
+//                    .navigationBarTitleDisplayMode(.inline).padding()
+//
+//
+//            }
+//
+//            .onAppear {
+//               fetchProducts.getAll()
+//            }
+//
+//        }
+//
         
        
         

@@ -22,7 +22,7 @@ struct ContentView: View {
                 .tag(0)
             
 
-            Text("Products View")
+            ProductScreen()
                 .tabItem {
                     Image(systemName: "leaf")
                     Text("Products")
