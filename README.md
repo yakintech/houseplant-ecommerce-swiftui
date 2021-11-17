@@ -1,5 +1,5 @@
 ## Takip Edilecek Topluluklar
-https://medium.com/swiftcommmunity
+https://medium.com/swiftcommmunity </br>
 https://medium.com/turkishkit
 
 
