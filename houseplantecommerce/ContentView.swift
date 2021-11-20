@@ -37,14 +37,14 @@ struct ContentView: View {
                 }
                 .tag(2)
             
-            Text("Blog View")
+            LoginScreen()
                 .tabItem {
                     Image(systemName: "heart.text.square")
                     Text("Blog")
                 }
                 .tag(3)
             
-            Text("Profile View")
+            RegisterScreen()
                 .tabItem {
                     Image(systemName: "person.crop.circle.fill.badge.checkmark")
                     Text("Profile")
