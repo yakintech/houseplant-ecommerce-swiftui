@@ -20,7 +20,7 @@ struct ProductListView: View {
                            NavigationLink(
             
             
-                            destination: ProductDetailScreen(id: item.id),
+                            destination: ProductDetailScreen(item: item),
                             label: {
                                 VStack{
                                     Text(item.name)

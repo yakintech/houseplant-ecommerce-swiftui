@@ -11,6 +11,8 @@ struct ContentView: View {
     
     @State private var selection = 0
     
+    @EnvironmentObject var appCart : AppCart
+    
     var body: some View {
     
         TabView(selection: $selection){
@@ -29,11 +31,11 @@ struct ContentView: View {
                 }
                 .tag(1)
             
-            
-            Text("Cart View")
+
+           CartScreen()
                 .tabItem {
                     Image(systemName: "cart")
-                    Text("Cart")
+                    Text("Cart-\(appCart.cart.cartProducts.count)")
                 }
                 .tag(2)
             
@@ -52,15 +54,17 @@ struct ContentView: View {
                 .tag(4)
             
         }
+        .environmentObject(appCart)
+        
         
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+
+
     static var previews: some View {
         ContentView()
+            .environmentObject(AppCart())
     }
 }
-
-
-//, , Sepet, Blog
