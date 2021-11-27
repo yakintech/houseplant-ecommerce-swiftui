@@ -19,4 +19,5 @@ struct CartProduct{
     var name : String = ""
     var quantity : Int = 0
     var unitPrice = 0.0
+    var id : String = ""
 }

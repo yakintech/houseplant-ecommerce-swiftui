@@ -10,37 +10,62 @@ import URLImage
 
 struct ProductListView: View {
     
-  var fetchProducts = AlternativeProductRepository()
-  @State var data = [ProductModel]()
-
+    var fetchProducts = AlternativeProductRepository()
+    
+    @EnvironmentObject var appCart : AppCart
+    
+    @State var data = [ProductModel]()
+    
     
     var body: some View {
-     
+        
+        
+        
         List(data){ item in
-                           NavigationLink(
+            NavigationLink(
+                
+                
+                destination: ProductDetailScreen(item: item),
+                label: {
+                    VStack{
+                        
+                        URLImage(URL(string: item.images[0])!) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        }
+                        Text(item.name)
+                        Text(String(item.price))
+                        
+                    }
+                }
+                
+            ).navigationTitle("Çiçekler")
+                .navigationBarTitleDisplayMode(.inline).padding()
             
-            
-                            destination: ProductDetailScreen(item: item),
-                            label: {
-                                VStack{
-                                    Text(item.name)
-                                    URLImage(URL(string: item.images[0])!) { image in
-                                                    image
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fit)
-                                                }
-                                   Text(String(item.price))
-                                }
-                            }
-            
-                           ).navigationTitle("Çiçekler")
-                                .navigationBarTitleDisplayMode(.inline).padding()
+            Button("Add to cart"){
+                
+                guard let indexNo = appCart.cart.cartProducts.firstIndex(where: {$0.id == item.id})
+                else  {
+                    
+                    let newCartProduct = CartProduct(name: item.name, quantity: 1, unitPrice: item.price, id: item.id)
+                    appCart.cart.cartProducts.append(newCartProduct);
+                    appCart.cart.totalPrice = appCart.cart.totalPrice + item.price
+                    return
+                }
+                
+                
+                appCart.cart.cartProducts[indexNo].quantity = appCart.cart.cartProducts[indexNo].quantity + 1
+                
+                
+            }
         }
         .onAppear(){
             fetchProducts.getAll(){ productsData in
                 data = productsData
             }
         }
+        
         
         
     }

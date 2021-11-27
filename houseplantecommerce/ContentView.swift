@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @State private var selection = 0
     
-    @EnvironmentObject var appCart : AppCart
+    @StateObject var appCart : AppCart = AppCart()
     
     var body: some View {
     

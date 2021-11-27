@@ -14,7 +14,7 @@ struct ProductDetailScreen: View {
     
     @EnvironmentObject var appCart : AppCart
     
-    @State var count = 1
+    @State var count : Int = 1
     
     init(item:ProductModel){
         self.product = item
@@ -38,35 +38,23 @@ struct ProductDetailScreen: View {
             }
             
             Button("Add to cart"){
-               
-                //Sepette bu ürün varsa o ürünün miktarı değiştirilir yoksa yeni ürün eklenir
-                //Örneğin sepette 1 adet papatya var ve ben 2 adet eklemek istiyorum
-
-                var sepetteBuUrunVarMi = false;
                 
-                if  appCart.cart.cartProducts.count > 0 {
-                    
-                    //0 dan büyükse sepette ürün var demektir. Şimdi sepette eklenecek ürün var mı ona bakıyoruz...
-                    var cartData = appCart.cart.cartProducts.filter{$0.name.contains(self.product.name)}
-                    
-                    if cartData.count > 0{
-                        cartData[0].quantity =  cartData[0].quantity  + count
-                        sepetteBuUrunVarMi = true;
-                        
-                        appCart.cart.totalPrice = appCart.cart.totalPrice + (Double(count) * product.price)
-                    }
-                    
-                    
-                }
                 
-                if sepetteBuUrunVarMi == false {
-                    var newCartProduct = CartProduct(name: self.product.name, quantity: count, unitPrice: self.product.price)
+                guard let indexNo = appCart.cart.cartProducts.firstIndex(where: {$0.id == self.product.id})
+                else  {
+                    
+                    let newCartProduct = CartProduct(name: self.product.name, quantity: count, unitPrice: self.product.price, id: self.product.id)
                     appCart.cart.cartProducts.append(newCartProduct);
-                    
                     appCart.cart.totalPrice = appCart.cart.totalPrice + (Double(count) * product.price)
+                    return
                 }
+                
+   
+                appCart.cart.cartProducts[indexNo].quantity = appCart.cart.cartProducts[indexNo].quantity + count
+                
+                
             }
-
+            
         }
         
     }
