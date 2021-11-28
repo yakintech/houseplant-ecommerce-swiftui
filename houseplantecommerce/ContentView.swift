@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var selection = 0
     
     @StateObject var appCart : AppCart = AppCart()
+    @StateObject var userStore : UserStore = UserStore()
     
     var body: some View {
     
@@ -46,7 +47,7 @@ struct ContentView: View {
                 }
                 .tag(3)
             
-            RegisterScreen()
+            ProfileMainScreen()
                 .tabItem {
                     Image(systemName: "person.crop.circle.fill.badge.checkmark")
                     Text("Profile")
@@ -55,6 +56,7 @@ struct ContentView: View {
             
         }
         .environmentObject(appCart)
+        .environmentObject(userStore)
         
         
     }
@@ -66,5 +68,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(AppCart())
+            .environmentObject(UserStore())
     }
 }

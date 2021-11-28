@@ -14,53 +14,76 @@ struct CartScreen: View {
     
     @State var totalPrice  = 0.0
     
-
+    
     var body: some View {
-
-        VStack{
         
-            Text(String(totalPrice))
+        NavigationView{
             
-            List(appCart.cart.cartProducts, id:\.name){ item in
-
-                VStack{
-               
-                    Text("Name: " + item.name + " -" + String(item.quantity) )
-                    Text(String(Double(item.quantity) * item.unitPrice))
+            
+            VStack{
+                
+                Text(String(totalPrice))
+                
+                List(appCart.cart.cartProducts, id:\.name){ item in
                     
-//                    Stepper(value: $appCart.cart.cartProducts[0].quantity, in: 1...5){
-//                        Text("test")
-//                    }
-//
-
-                    Button("Delete"){
-
-                        let sepettekiDigerUrunler = appCart.cart.cartProducts.filter{!$0.id.contains(item.id)}
-                        appCart.cart.cartProducts = sepettekiDigerUrunler
-
-                        totalPrice = cartHelper.calcTotalPrice(cartProducts: appCart.cart.cartProducts)
+                    VStack{
+                        
+                        Text("Name: " + item.name + " -" + String(item.quantity) )
+                        Text(String(Double(item.quantity) * item.unitPrice))
+                        
+                        //                    Stepper(value: $appCart.cart.cartProducts[0].quantity, in: 1...5){
+                        //                        Text("test")
+                        //                    }
+                        //
+                        
+                        Button("Delete"){
+                            
+                            let sepettekiDigerUrunler = appCart.cart.cartProducts.filter{!$0.id.contains(item.id)}
+                            appCart.cart.cartProducts = sepettekiDigerUrunler
+                            
+                            totalPrice = cartHelper.calcTotalPrice(cartProducts: appCart.cart.cartProducts)
+                        }
+                        
+                        
                     }
-
-
+                }
+                
+                NavigationLink(
+                    destination: OrderScreen(),
+                    label: {
+                        VStack{
+                            Text("Order")
+                        }
+                    }
+                )
+                
+                
+                Button("Empty Cart"){
+                    appCart.cart.cartProducts = [CartProduct]()
+                    totalPrice = cartHelper.calcTotalPrice(cartProducts: appCart.cart.cartProducts)
+                }
+                .padding()
+                
+            }.onAppear(){
+                if appCart.cart.cartProducts.count > 0{
+                    
+                    totalPrice = cartHelper.calcTotalPrice(cartProducts: appCart.cart.cartProducts)
                 }
             }
             
-            Button("Empty Cart"){
-                appCart.cart.cartProducts = [CartProduct]()
-                totalPrice = cartHelper.calcTotalPrice(cartProducts: appCart.cart.cartProducts)
-            }
-            .padding()
             
-        }.onAppear(){
-            if appCart.cart.cartProducts.count > 0{
-                
-                totalPrice = cartHelper.calcTotalPrice(cartProducts: appCart.cart.cartProducts)
-            }
         }
-        
-           
     }
 }
+
+
+struct CartScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        CartScreen()
+            .environmentObject(AppCart())
+    }
+}
+
 
 
 

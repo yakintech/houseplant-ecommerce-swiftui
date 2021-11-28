@@ -14,6 +14,7 @@ struct RegisterModel : Codable{
     var email : String = ""
     var phone : String = ""
     var password : String = ""
+    var address : String = ""
     
 }
 

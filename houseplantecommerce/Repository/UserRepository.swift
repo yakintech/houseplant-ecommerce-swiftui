@@ -90,7 +90,7 @@ class UserRepository {
         var request = URLRequest(url:url)
         request.httpMethod = "POST"
         
-        let postString = "name=\(usermodel.name)&surname=\(usermodel.surname)&email=\(usermodel.email)&password=\(usermodel.password)"
+        let postString = "name=\(usermodel.name)&surname=\(usermodel.surname)&email=\(usermodel.email)&password=\(usermodel.password)&address=\(usermodel.address)"
         
         
         request.httpBody = postString.data(using: .utf8)

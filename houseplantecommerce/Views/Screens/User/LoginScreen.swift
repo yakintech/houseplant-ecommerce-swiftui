@@ -11,51 +11,59 @@ import SwiftUI
 
 struct LoginScreen : View{
     
+    @EnvironmentObject var userStore : UserStore
+    
     @State var loginModel : LoginModel = LoginModel()
     @State var errorMessage : String = ""
+    @State var selection : String? = ""
     
     var userRepository : UserRepository = UserRepository()
     
     
     var body: some View{
         
-        VStack{
-            
-            Form{
+            VStack{
                 
-                TextField("EMail",text: $loginModel.email)
-                 
+                NavigationLink(destination: ContentView(), tag: "home", selection: $selection){}
                 
-                SecureField("Password", text: $loginModel.password)
-                
-                
-                Button("Login"){
+                Form{
                     
-                    userRepository.loginCheck(loginModel:loginModel){result in
+                    TextField("EMail",text: $loginModel.email)
+                    
+                    
+                    SecureField("Password", text: $loginModel.password)
+                    
+                    
+                    Button("Login"){
                         
-                        if result.statusCode == 404{
-                            errorMessage = result.error
+                        userRepository.loginCheck(loginModel:loginModel){result in
+                            
+                            if result.statusCode == 404{
+                                errorMessage = result.error
+                            }
+                            if result.statusCode == 200{
+                                userStore.loginStatus = true
+                                
+                            }
                         }
-                        if result.statusCode == 200{
-                            print("Giriş Başarılı")
-                        }
+                        
                     }
                     
                 }
                 
             }
-            
-          
-            
-            
-            
-        }
-   
+        
+        
+        
+        
+        
+        
     }
 }
 
 struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
         LoginScreen()
+            .environmentObject(UserStore())
     }
 }

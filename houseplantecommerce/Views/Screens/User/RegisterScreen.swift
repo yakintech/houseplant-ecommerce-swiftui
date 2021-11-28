@@ -9,6 +9,8 @@ import SwiftUI
 
 struct RegisterScreen: View {
     
+    @EnvironmentObject var userStore : UserStore
+    
     var userRepository : UserRepository = UserRepository()
     @State var newuser : RegisterModel = RegisterModel()
     @State var errorMessage : String = ""
@@ -21,6 +23,7 @@ struct RegisterScreen: View {
                 TextField("Name", text:$newuser.name)
                 TextField("Surname", text:$newuser.surname)
                 TextField("EMail", text:$newuser.email)
+                TextField("Address", text: $newuser.address)
                 SecureField("Password", text:$newuser.password)
                 
                 Button("Register"){
@@ -30,7 +33,8 @@ struct RegisterScreen: View {
                             errorMessage = result.error
                         }
                         if result.statusCode == 201{
-                            print("Kayıt başarılı")
+                            userStore.loginStatus = true
+                            print(result)
                         }
                     }
                     
@@ -43,5 +47,6 @@ struct RegisterScreen: View {
 struct RegisterScreen_Previews: PreviewProvider {
     static var previews: some View {
         RegisterScreen()
+            .environmentObject(UserStore())
     }
 }
