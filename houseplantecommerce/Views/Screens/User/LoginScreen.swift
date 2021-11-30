@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import URLImage
 
 
+let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
 
 struct LoginScreen : View{
     
@@ -26,9 +28,25 @@ struct LoginScreen : View{
                 
                 NavigationLink(destination: ContentView(), tag: "home", selection: $selection){}
                 
+                
+                WelcomeText()
+                Image(systemName: "person.circle")
+                    .resizable()
+                    .frame(width: 100, height: 100, alignment: .center)
+                    
+                    .padding(.horizontal,100)
+                
                 Form{
                     
+                    
+                   
+                    
+                    
+                    
                     TextField("EMail",text: $loginModel.email)
+                        
+                        
+                      
                     
                     
                     SecureField("Password", text: $loginModel.password)
@@ -49,9 +67,19 @@ struct LoginScreen : View{
                         
                     }
                     
+                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .frame(width: 110, height: 40)
+                                    .background(Color.green)
+                                    .cornerRadius(15.0)
+                                    
+                    
                 }
                 
+                
             }
+           
         
         
         
@@ -67,3 +95,13 @@ struct LoginScreen_Previews: PreviewProvider {
             .environmentObject(UserStore())
     }
 }
+
+struct WelcomeText : View {
+    var body: some View {
+        return Text("Welcome !")
+            .font(.largeTitle)
+            .fontWeight(.semibold)
+            .padding(.horizontal,65)
+    }
+}
+
