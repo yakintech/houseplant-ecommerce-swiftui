@@ -67,10 +67,11 @@ struct LoginScreen : View{
                         
                     }
                     
+                    .frame(maxWidth:.infinity)
                     .font(.headline)
                                     .foregroundColor(.white)
                                     .padding()
-                                    .frame(width: 110, height: 40)
+                                    
                                     .background(Color.green)
                                     .cornerRadius(15.0)
                                     
