@@ -17,7 +17,7 @@
                BlueprintIdentifier = "1D054E5E272D4DA80081E75B"
                BuildableName = "houseplantecommerce.app"
                BlueprintName = "houseplantecommerce"
-               ReferencedContainer = "container:houseplantecommerce.xcodeproj">
+               ReferencedContainer = "container:HomeScreeninTasar&#x131;m&#x131; .xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "1D054E5E272D4DA80081E75B"
             BuildableName = "houseplantecommerce.app"
             BlueprintName = "houseplantecommerce"
-            ReferencedContainer = "container:houseplantecommerce.xcodeproj">
+            ReferencedContainer = "container:HomeScreeninTasar&#x131;m&#x131; .xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -71,7 +71,7 @@
             BlueprintIdentifier = "1D054E5E272D4DA80081E75B"
             BuildableName = "houseplantecommerce.app"
             BlueprintName = "houseplantecommerce"
-            ReferencedContainer = "container:houseplantecommerce.xcodeproj">
+            ReferencedContainer = "container:HomeScreeninTasar&#x131;m&#x131; .xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
