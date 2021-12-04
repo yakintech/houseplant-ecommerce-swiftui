@@ -16,55 +16,66 @@ struct ProductListView: View {
     
     @State var data = [ProductModel]()
     
-    
     var body: some View {
         
-        
-        
-        List(data){ item in
-            NavigationLink(
-                
-                
-                destination: ProductDetailScreen(item: item),
-                label: {
-                    VStack{
+        VStack{
+            
+            if($data.count > 0){
+                List(data){ item in
+                    NavigationLink(
                         
-                        URLImage(URL(string: item.images[0])!) { image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
+                        
+                        destination: ProductDetailScreen(item: item),
+                        label: {
+                            VStack{
+                                
+                                URLImage(URL(string: item.images[0])!) { image in
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                }
+                                Text(item.name)
+                                Text(String(item.price))
+                                
+                            }
                         }
-                        Text(item.name)
-                        Text(String(item.price))
+                        
+                    ).navigationTitle("Çiçekler")
+                        .navigationBarTitleDisplayMode(.inline).padding()
+                    
+                    Button("Add to cart"){
+                        
+                        guard let indexNo = appCart.cart.cartProducts.firstIndex(where: {$0.id == item.id})
+                        else  {
+                            
+                            let newCartProduct = CartProduct(name: item.name, quantity: 1, unitPrice: item.price, id: item.id)
+                            appCart.cart.cartProducts.append(newCartProduct);
+                            appCart.cart.totalPrice = appCart.cart.totalPrice + item.price
+                            return
+                        }
+                        
+                        
+                        appCart.cart.cartProducts[indexNo].quantity = appCart.cart.cartProducts[indexNo].quantity + 1
+                        
                         
                     }
                 }
-                
-            ).navigationTitle("Çiçekler")
-                .navigationBarTitleDisplayMode(.inline).padding()
-            
-            Button("Add to cart"){
-                
-                guard let indexNo = appCart.cart.cartProducts.firstIndex(where: {$0.id == item.id})
-                else  {
-                    
-                    let newCartProduct = CartProduct(name: item.name, quantity: 1, unitPrice: item.price, id: item.id)
-                    appCart.cart.cartProducts.append(newCartProduct);
-                    appCart.cart.totalPrice = appCart.cart.totalPrice + item.price
-                    return
-                }
-                
-                
-                appCart.cart.cartProducts[indexNo].quantity = appCart.cart.cartProducts[indexNo].quantity + 1
-                
-                
             }
+            else{
+                Text("Ürünler bulunamadı")
+            }
+            
+            
         }
         .onAppear(){
             fetchProducts.getAll(){ productsData in
                 data = productsData
             }
         }
+        
+
+
+       
         
         
         

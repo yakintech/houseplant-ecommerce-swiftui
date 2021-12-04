@@ -13,6 +13,7 @@ class UserStore : ObservableObject {
 }
 
 struct UserInformation{
+    var name : String = ""
     var email : String = "";
     var phone : String = "";
     var address : String = "";

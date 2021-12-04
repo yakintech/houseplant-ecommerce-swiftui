@@ -24,7 +24,6 @@ struct LoginScreen : View{
         
             VStack{
                 
-                NavigationLink(destination: ContentView(), tag: "home", selection: $selection){}
                 
                 Form{
                     
@@ -42,7 +41,23 @@ struct LoginScreen : View{
                                 errorMessage = result.error
                             }
                             if result.statusCode == 200{
+
+                                var userInfo = UserInformation()
+
+                                let loginUser : UserModel = (result.responseData as? UserModel ?? UserModel())
+
+                                userInfo.email = loginUser.email
+                                userInfo.address = loginUser.address
+                                userInfo.id = loginUser.id
+                                userInfo.name = loginUser.name
+
+                                userStore.userInfo = userInfo
                                 userStore.loginStatus = true
+                                
+                                
+                                LoginHelper.token =  loginUser.token
+                                
+                             
                                 
                             }
                         }

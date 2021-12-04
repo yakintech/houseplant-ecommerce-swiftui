@@ -11,13 +11,15 @@ struct ProfileScreen: View {
     
     @EnvironmentObject var userStore : UserStore
     
+    
     var body: some View {
         VStack{
-            Text("Kullanıcı Ekranı")
-                .padding()
+            Text("Hoşgeldin \(userStore.userInfo.name)")
+       
             
             Button("Sign Out"){
                 userStore.loginStatus = false
+                LoginHelper.token = ""
             }
         }
       
