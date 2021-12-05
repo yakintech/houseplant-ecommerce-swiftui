@@ -33,8 +33,25 @@ struct RegisterScreen: View {
                             errorMessage = result.error
                         }
                         if result.statusCode == 201{
+                        
+                        
+                           
+                            var userInfo = UserInformation()
+//                            //servisten gelen user bilgilerini userInfo ya koyacağım. Onu da store içerisine atacağım. böylelikle user bilgisi hangi ekranda lazımsa o ekran store a bağlanıp çekecek.
+                            
+
+                            let registerUser : UserModel = (result.responseData as? UserModel ?? UserModel())
+
+                            userInfo.email = registerUser.email
+                            userInfo.address = registerUser.address
+                            userInfo.id = registerUser.id
+                            userInfo.name = registerUser.name
+                            
+                            userStore.userInfo = userInfo
+                            
                             userStore.loginStatus = true
-                            print(result)
+                        
+                       
                         }
                     }
                     

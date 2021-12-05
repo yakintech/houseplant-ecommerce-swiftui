@@ -13,4 +13,7 @@ struct UserModel : Codable {
     var surname : String = ""
     var email : String = ""
     var address : String = ""
+    var id : String = ""
+    var token : String = ""
+    var refreshToken : String = ""
 }

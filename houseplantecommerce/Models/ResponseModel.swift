@@ -16,7 +16,6 @@ struct ResponseModel {
     
 }
 
-
 struct ErrorModel : Codable {
     var message : String = ""
 }

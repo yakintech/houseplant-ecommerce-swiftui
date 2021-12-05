@@ -13,18 +13,13 @@ struct HomeScreen: View {
     @ObservedObject var fetchProducts = ProductRepository()
     
     var data = [ProductModel]()
-
-
+    
     var body: some View {
-        
             
         NavigationView{
             ProductListView()
         }
 
-        
-
-        
     }
 }
 

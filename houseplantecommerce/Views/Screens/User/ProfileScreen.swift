@@ -11,13 +11,23 @@ struct ProfileScreen: View {
     
     @EnvironmentObject var userStore : UserStore
     
+    var loginStorage : LoginLocalStorage = LoginLocalStorage()
+    var tokenStorage = TokenLocalStorage()
+    
+    
     var body: some View {
         VStack{
-            Text("Kullanıcı Ekranı")
-                .padding()
+            Text("Hoşgeldin \(userStore.userInfo.name)")
+       
             
             Button("Sign Out"){
                 userStore.loginStatus = false
+                
+                let emptyModal = TokenStorageModel()
+                tokenStorage.setToken(info: emptyModal)
+                
+                loginStorage.setLoginStatus(status: false);
+                
             }
         }
       

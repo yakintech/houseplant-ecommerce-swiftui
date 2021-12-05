@@ -9,4 +9,6 @@ import Foundation
 
 class LoginHelper{
     static var loginStatus = false;
+    static var token = ""
+    static var refreshToken = ""
 }
