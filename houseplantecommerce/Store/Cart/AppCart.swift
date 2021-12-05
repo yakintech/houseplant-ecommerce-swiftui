@@ -9,4 +9,11 @@ import Foundation
 
 class AppCart : ObservableObject {
     @Published var cart = CartModel()
+    
+    var cartStorage = CartLocalStorage()
+    
+    init(){
+        
+        cart = cartStorage.getCart()
+    }
 }

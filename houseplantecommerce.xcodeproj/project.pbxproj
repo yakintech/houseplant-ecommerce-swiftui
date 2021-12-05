@@ -20,6 +20,8 @@
 		1D25A3732737E552007D42A9 /* ProductDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A3722737E552007D42A9 /* ProductDetailScreen.swift */; };
 		1D5B6985275240660030B4D4 /* CartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B6984275240660030B4D4 /* CartHelper.swift */; };
 		1D5B6989275243FB0030B4D4 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B6988275243FB0030B4D4 /* CartButton.swift */; };
+		1D7E4CF4275CA1B500155BB6 /* TokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E4CF3275CA1B500155BB6 /* TokenRepository.swift */; };
+		1D7E4CF8275CABFF00155BB6 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E4CF7275CABFF00155BB6 /* LocalStorage.swift */; };
 		1D9A1E6827411F7800ADAED7 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A1E6727411F7800ADAED7 /* ProductListView.swift */; };
 		1DAE40F3274121A20070D0EB /* ProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DAE40F2274121A20070D0EB /* ProductScreen.swift */; };
 		1DD2C068273FB08C005CA8FD /* AlternativeProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2C067273FB08C005CA8FD /* AlternativeProductRepository.swift */; };
@@ -60,6 +62,8 @@
 		1D25A3722737E552007D42A9 /* ProductDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailScreen.swift; sourceTree = "<group>"; };
 		1D5B6984275240660030B4D4 /* CartHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartHelper.swift; sourceTree = "<group>"; };
 		1D5B6988275243FB0030B4D4 /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
+		1D7E4CF3275CA1B500155BB6 /* TokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRepository.swift; sourceTree = "<group>"; };
+		1D7E4CF7275CABFF00155BB6 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		1D9A1E6727411F7800ADAED7 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		1DAE40F2274121A20070D0EB /* ProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductScreen.swift; sourceTree = "<group>"; };
 		1DD2C067273FB08C005CA8FD /* AlternativeProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlternativeProductRepository.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 		1D054E61272D4DA80081E75B /* houseplantecommerce */ = {
 			isa = PBXGroup;
 			children = (
+				1D7E4CF6275CABE200155BB6 /* LocalStorage */,
 				1D5B6983275240550030B4D4 /* Helpers */,
 				1DF8D99B274A2BEE00C0F4D7 /* Store */,
 				1D25A3682737BE36007D42A9 /* Env */,
@@ -204,6 +209,7 @@
 				1D25A3632737BC99007D42A9 /* UserRepository.swift */,
 				1D25A36D2737CAC2007D42A9 /* ProductRepository.swift */,
 				1DD2C067273FB08C005CA8FD /* AlternativeProductRepository.swift */,
+				1D7E4CF3275CA1B500155BB6 /* TokenRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -255,6 +261,14 @@
 				1D5B6988275243FB0030B4D4 /* CartButton.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		1D7E4CF6275CABE200155BB6 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				1D7E4CF7275CABFF00155BB6 /* LocalStorage.swift */,
+			);
+			path = LocalStorage;
 			sourceTree = "<group>";
 		};
 		1D9A1E692741204B00ADAED7 /* Product */ = {
@@ -412,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7E4CF8275CABFF00155BB6 /* LocalStorage.swift in Sources */,
 				1D9A1E6827411F7800ADAED7 /* ProductListView.swift in Sources */,
 				1D054E65272D4DA80081E75B /* ContentView.swift in Sources */,
 				1DEE8E2A27536AE80020F39C /* OrderScreen.swift in Sources */,
@@ -429,6 +444,7 @@
 				1DF8D99E274A2C1500C0F4D7 /* AppCart.swift in Sources */,
 				1DD2C06A273FB2B8005CA8FD /* AlternativeHomeScreen.swift in Sources */,
 				1D25A3642737BC99007D42A9 /* UserRepository.swift in Sources */,
+				1D7E4CF4275CA1B500155BB6 /* TokenRepository.swift in Sources */,
 				1DEE8E2C27536C6A0020F39C /* OrderModel.swift in Sources */,
 				1DEE8E2F275370CE0020F39C /* LoginHelper.swift in Sources */,
 				1DEE8E3527537B550020F39C /* ProfileScreen.swift in Sources */,

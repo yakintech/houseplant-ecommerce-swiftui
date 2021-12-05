@@ -11,19 +11,23 @@ import Foundation
 class AlternativeProductRepository{
     
     var products = ProductModel()
+    var tokenLocalStorage = TokenLocalStorage()
     
     func getAll(completionHandler: @escaping ([ProductModel])-> Void){
         
         guard let url = URL(string: Config.apiURL + "/api/products") else {return}
         
         var urlRequest = URLRequest(url: url)
-        urlRequest.setValue(LoginHelper.token, forHTTPHeaderField: "Authorization")
+        let tokenModel = tokenLocalStorage.getToken()
+        urlRequest.setValue(tokenModel.accessToken, forHTTPHeaderField: "Authorization")
         
         
         
         URLSession.shared.dataTask(with: urlRequest) {(data, response, error)  in
             
-                    
+            if let httpResponse = response as? HTTPURLResponse {
+                
+                if httpResponse.statusCode == 200 {
                     do{
                         
                         if let products = data {
@@ -35,8 +39,31 @@ class AlternativeProductRepository{
                     }
                     catch{
                                 
+                 
                         completionHandler([ProductModel]())
                     }
+                }
+                else if httpResponse.statusCode == 401 {
+                    getTokenWithRefreshToken(){tokenModel in
+                        
+                 
+                        
+                        if(tokenModel.status == true){
+                            
+                        }
+                        else{
+                            completionHandler([ProductModel]())
+                        }
+                        
+                    }
+                    //Token düştüğü için tekrar token almam ve mevcut metodu tekrar tetiklemem gerekli
+                }
+                
+
+            
+            }
+                    
+                  
                
             
         }.resume()

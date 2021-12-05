@@ -11,6 +11,9 @@ struct ProfileScreen: View {
     
     @EnvironmentObject var userStore : UserStore
     
+    var loginStorage : LoginLocalStorage = LoginLocalStorage()
+    var tokenStorage = TokenLocalStorage()
+    
     
     var body: some View {
         VStack{
@@ -19,7 +22,12 @@ struct ProfileScreen: View {
             
             Button("Sign Out"){
                 userStore.loginStatus = false
-                LoginHelper.token = ""
+                
+                let emptyModal = TokenStorageModel()
+                tokenStorage.setToken(info: emptyModal)
+                
+                loginStorage.setLoginStatus(status: false);
+                
             }
         }
       

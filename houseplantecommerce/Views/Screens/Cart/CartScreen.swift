@@ -11,6 +11,7 @@ struct CartScreen: View {
     
     @EnvironmentObject var appCart : AppCart
     var cartHelper : CartHelper =  CartHelper()
+    var cartStorage = CartLocalStorage()
     
     @State var totalPrice  = 0.0
     
@@ -42,6 +43,8 @@ struct CartScreen: View {
                             appCart.cart.cartProducts = sepettekiDigerUrunler
                             
                             totalPrice = cartHelper.calcTotalPrice(cartProducts: appCart.cart.cartProducts)
+                            
+                            cartStorage.setCart(cart: appCart.cart)
                         }
                         
                         
@@ -61,6 +64,7 @@ struct CartScreen: View {
                 Button("Empty Cart"){
                     appCart.cart.cartProducts = [CartProduct]()
                     totalPrice = cartHelper.calcTotalPrice(cartProducts: appCart.cart.cartProducts)
+                    cartStorage.setCart(cart: appCart.cart)
                 }
                 .padding()
                 

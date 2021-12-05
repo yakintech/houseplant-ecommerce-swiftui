@@ -11,6 +11,7 @@ import URLImage
 struct ProductDetailScreen: View {
     
     var product = ProductModel()
+    var cartStorage = CartLocalStorage()
     
     @EnvironmentObject var appCart : AppCart
     
@@ -46,12 +47,15 @@ struct ProductDetailScreen: View {
                     let newCartProduct = CartProduct(name: self.product.name, quantity: count, unitPrice: self.product.price, id: self.product.id)
                     appCart.cart.cartProducts.append(newCartProduct);
                     appCart.cart.totalPrice = appCart.cart.totalPrice + (Double(count) * product.price)
+                    cartStorage.setCart(cart: appCart.cart)
                     return
                 }
                 
    
                 appCart.cart.cartProducts[indexNo].quantity = appCart.cart.cartProducts[indexNo].quantity + count
                 
+            
+                cartStorage.setCart(cart: appCart.cart)
                 
             }
             

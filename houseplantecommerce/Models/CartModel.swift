@@ -8,14 +8,14 @@
 import Foundation
 
 
-struct CartModel {
+struct CartModel : Codable {
     
     var cartProducts : [CartProduct] = [CartProduct]()
     var totalPrice = 0.0
     var userId = ""
 }
 
-struct CartProduct{
+struct CartProduct : Codable{
     var name : String = ""
     var quantity : Int = 0
     var unitPrice = 0.0
