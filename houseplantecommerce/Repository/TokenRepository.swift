@@ -17,7 +17,7 @@ func getTokenWithRefreshToken(completionHandler: @escaping (TokenModel) -> Void 
     var request = URLRequest(url:url)
     request.httpMethod = "POST"
     
-    let postString = "email=cagatay@mail.com&refreshToken=\(LoginHelper.refreshToken)"
+    let postString = "email=cagatay@gmail.com&refreshToken=\(LoginHelper.refreshToken)"
     
     request.httpBody = postString.data(using: .utf8)
     
