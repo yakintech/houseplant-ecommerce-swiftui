@@ -40,10 +40,10 @@ struct ContentView: View {
                 }
                 .tag(2)
             
-            LoginScreen()
+            ChatMainScreen()
                 .tabItem {
                     Image(systemName: "heart.text.square")
-                    Text("Blog")
+                    Text("Chat")
                 }
                 .tag(3)
             

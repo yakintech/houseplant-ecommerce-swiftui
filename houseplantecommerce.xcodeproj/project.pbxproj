@@ -18,6 +18,12 @@
 		1D25A36E2737CAC2007D42A9 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A36D2737CAC2007D42A9 /* ProductRepository.swift */; };
 		1D25A3702737CB91007D42A9 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A36F2737CB91007D42A9 /* ProductModel.swift */; };
 		1D25A3732737E552007D42A9 /* ProductDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D25A3722737E552007D42A9 /* ProductDetailScreen.swift */; };
+		1D554A61276F130100461ACA /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 1D554A60276F130100461ACA /* SocketIO */; };
+		1D554A64276F14F400461ACA /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D554A63276F14F400461ACA /* ChatScreen.swift */; };
+		1D554A66276F158000461ACA /* ChatMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D554A65276F158000461ACA /* ChatMainScreen.swift */; };
+		1D554A69276F16A400461ACA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1D554A68276F16A400461ACA /* Alamofire */; };
+		1D554A6B276F16AF00461ACA /* GenericRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D554A6A276F16AF00461ACA /* GenericRepository.swift */; };
+		1D554A6D276F18CA00461ACA /* UserListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D554A6C276F18CA00461ACA /* UserListModel.swift */; };
 		1D5B6985275240660030B4D4 /* CartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B6984275240660030B4D4 /* CartHelper.swift */; };
 		1D5B6989275243FB0030B4D4 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B6988275243FB0030B4D4 /* CartButton.swift */; };
 		1D7E4CF4275CA1B500155BB6 /* TokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E4CF3275CA1B500155BB6 /* TokenRepository.swift */; };
@@ -60,6 +66,10 @@
 		1D25A36D2737CAC2007D42A9 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
 		1D25A36F2737CB91007D42A9 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		1D25A3722737E552007D42A9 /* ProductDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailScreen.swift; sourceTree = "<group>"; };
+		1D554A63276F14F400461ACA /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
+		1D554A65276F158000461ACA /* ChatMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMainScreen.swift; sourceTree = "<group>"; };
+		1D554A6A276F16AF00461ACA /* GenericRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericRepository.swift; sourceTree = "<group>"; };
+		1D554A6C276F18CA00461ACA /* UserListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListModel.swift; sourceTree = "<group>"; };
 		1D5B6984275240660030B4D4 /* CartHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartHelper.swift; sourceTree = "<group>"; };
 		1D5B6988275243FB0030B4D4 /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
 		1D7E4CF3275CA1B500155BB6 /* TokenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRepository.swift; sourceTree = "<group>"; };
@@ -92,7 +102,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DD2C06F273FBCED005CA8FD /* URLImage in Frameworks */,
+				1D554A69276F16A400461ACA /* Alamofire in Frameworks */,
 				1DD2C06D273FBCED005CA8FD /* URLImageStore in Frameworks */,
+				1D554A61276F130100461ACA /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +166,7 @@
 				1DF03E47274901EE00642C67 /* LoginModel.swift */,
 				1DF03E492749047200642C67 /* UserModel.swift */,
 				1DEE8E2B27536C6A0020F39C /* OrderModel.swift */,
+				1D554A6C276F18CA00461ACA /* UserListModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,6 +191,7 @@
 		1D054E76272D5B5D0081E75B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				1D554A62276F14E200461ACA /* Chat */,
 				1DEE8E2827536AD60020F39C /* Order */,
 				1DF8D9A3274A49B500C0F4D7 /* Cart */,
 				1DF03E402748DC2100642C67 /* User */,
@@ -210,6 +224,7 @@
 				1D25A36D2737CAC2007D42A9 /* ProductRepository.swift */,
 				1DD2C067273FB08C005CA8FD /* AlternativeProductRepository.swift */,
 				1D7E4CF3275CA1B500155BB6 /* TokenRepository.swift */,
+				1D554A6A276F16AF00461ACA /* GenericRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -236,6 +251,15 @@
 				1DD2C069273FB2B8005CA8FD /* AlternativeHomeScreen.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		1D554A62276F14E200461ACA /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				1D554A63276F14F400461ACA /* ChatScreen.swift */,
+				1D554A65276F158000461ACA /* ChatMainScreen.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		1D5B6983275240550030B4D4 /* Helpers */ = {
@@ -369,6 +393,8 @@
 			packageProductDependencies = (
 				1DD2C06C273FBCED005CA8FD /* URLImageStore */,
 				1DD2C06E273FBCED005CA8FD /* URLImage */,
+				1D554A60276F130100461ACA /* SocketIO */,
+				1D554A68276F16A400461ACA /* Alamofire */,
 			);
 			productName = houseplantecommerce;
 			productReference = 1D054E5F272D4DA80081E75B /* houseplantecommerce.app */;
@@ -399,6 +425,8 @@
 			mainGroup = 1D054E56272D4DA80081E75B;
 			packageReferences = (
 				1DD2C06B273FBCED005CA8FD /* XCRemoteSwiftPackageReference "url-image" */,
+				1D554A5F276F130100461ACA /* XCRemoteSwiftPackageReference "socket" */,
+				1D554A67276F16A400461ACA /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1D054E60272D4DA80081E75B /* Products */;
 			projectDirPath = "";
@@ -429,6 +457,7 @@
 				1D7E4CF8275CABFF00155BB6 /* LocalStorage.swift in Sources */,
 				1D9A1E6827411F7800ADAED7 /* ProductListView.swift in Sources */,
 				1D054E65272D4DA80081E75B /* ContentView.swift in Sources */,
+				1D554A64276F14F400461ACA /* ChatScreen.swift in Sources */,
 				1DEE8E2A27536AE80020F39C /* OrderScreen.swift in Sources */,
 				1D5B6989275243FB0030B4D4 /* CartButton.swift in Sources */,
 				1D054E73272D5AC50081E75B /* RegisterModel.swift in Sources */,
@@ -448,13 +477,16 @@
 				1DEE8E2C27536C6A0020F39C /* OrderModel.swift in Sources */,
 				1DEE8E2F275370CE0020F39C /* LoginHelper.swift in Sources */,
 				1DEE8E3527537B550020F39C /* ProfileScreen.swift in Sources */,
+				1D554A6D276F18CA00461ACA /* UserListModel.swift in Sources */,
 				1DF03E422748DC3200642C67 /* RegisterScreen.swift in Sources */,
 				1D054E63272D4DA80081E75B /* houseplantecommerceApp.swift in Sources */,
 				1DEE8E31275371B00020F39C /* ProfileMainScreen.swift in Sources */,
 				1D5B6985275240660030B4D4 /* CartHelper.swift in Sources */,
 				1DF8D9A2274A370B00C0F4D7 /* DeviceSettings.swift in Sources */,
+				1D554A66276F158000461ACA /* ChatMainScreen.swift in Sources */,
 				1D25A3702737CB91007D42A9 /* ProductModel.swift in Sources */,
 				1DF03E442748FF9E00642C67 /* ResponseModel.swift in Sources */,
+				1D554A6B276F16AF00461ACA /* GenericRepository.swift in Sources */,
 				1DF8D9A0274A30B600C0F4D7 /* CartScreen.swift in Sources */,
 				1DF03E4A2749047200642C67 /* UserModel.swift in Sources */,
 				1DD2C068273FB08C005CA8FD /* AlternativeProductRepository.swift in Sources */,
@@ -649,6 +681,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1D554A5F276F130100461ACA /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		1D554A67276F16A400461ACA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		1DD2C06B273FBCED005CA8FD /* XCRemoteSwiftPackageReference "url-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
@@ -660,6 +708,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1D554A60276F130100461ACA /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D554A5F276F130100461ACA /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+		1D554A68276F16A400461ACA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D554A67276F16A400461ACA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		1DD2C06C273FBCED005CA8FD /* URLImageStore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1DD2C06B273FBCED005CA8FD /* XCRemoteSwiftPackageReference "url-image" */;
